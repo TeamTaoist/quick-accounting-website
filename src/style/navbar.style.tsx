@@ -10,7 +10,8 @@ export const NavbarContainer = styled.div`
   height: 72px;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  inset: 0;
 `;
 export const Nav = styled.div`
   display: flex;
