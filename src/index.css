@@ -16,3 +16,8 @@ img {
   width: 100%;
   display: block;
 }
+
+:root {
+  --text-primary: #ffffff;
+  --text-secondary: #295082
+}
