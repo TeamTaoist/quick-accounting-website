@@ -1,5 +1,15 @@
-import { Logo, NavLink, NavList, NavbarContainer } from "../style/navbar.style";
+import {
+  Logo,
+  MobileNavMenu,
+  Nav,
+  NavLink,
+  NavList,
+  NavListDropdown,
+  NavbarContainer,
+} from "../style/navbar.style";
 import logo from "../assets/images/logo.svg";
+import menu from "../assets/images/menu.svg";
+import { useState } from "react";
 
 const navList = [
   {
@@ -21,17 +31,30 @@ const navList = [
 ];
 
 const Navbar = () => {
+  const [showNavDropdown, setShowNavDropdown] = useState<boolean>(false);
   return (
     <NavbarContainer>
-      <NavList>
+      <Nav>
         <Logo>
           <img src={logo} alt="" />
         </Logo>
-        {navList.map((item) => (
-          <NavLink>{item.name}</NavLink>
-        ))}
-        <button>Get Started</button>
-      </NavList>
+        <NavList>
+          {navList.map((item) => (
+            <NavLink>{item.name}</NavLink>
+          ))}
+          <button>Get Started</button>
+        </NavList>
+        <MobileNavMenu onClick={() => setShowNavDropdown(!showNavDropdown)}>
+          <img src={menu} alt="" />
+        </MobileNavMenu>
+      </Nav>
+      {showNavDropdown && (
+        <NavListDropdown>
+          {navList.map((item) => (
+            <p>{item.name}</p>
+          ))}
+        </NavListDropdown>
+      )}
     </NavbarContainer>
   );
 };
