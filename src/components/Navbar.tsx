@@ -9,7 +9,7 @@ import {
 } from "../style/navbar.style";
 import logo from "../assets/images/logo.svg";
 import menu from "../assets/images/menu.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navList = [
   {
@@ -31,7 +31,27 @@ const navList = [
 ];
 
 const Navbar = () => {
+  const userButtonRef = useRef<any>(null);
   const [showNavDropdown, setShowNavDropdown] = useState<boolean>(false);
+
+  // hide dropdown globally
+  useEffect(() => {
+    const handleClickOutside = (e: any) => {
+      if (
+        showNavDropdown &&
+        userButtonRef.current &&
+        !userButtonRef.current.contains(e.target)
+      ) {
+        setShowNavDropdown(false);
+      }
+    };
+    if (showNavDropdown) {
+      window.addEventListener("click", handleClickOutside);
+    }
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, [showNavDropdown]);
   return (
     <NavbarContainer>
       <Nav>
@@ -44,7 +64,10 @@ const Navbar = () => {
           ))}
           <button>Get Started</button>
         </NavList>
-        <MobileNavMenu onClick={() => setShowNavDropdown(!showNavDropdown)}>
+        <MobileNavMenu
+          onClick={() => setShowNavDropdown(!showNavDropdown)}
+          ref={userButtonRef}
+        >
           <img src={menu} alt="" />
         </MobileNavMenu>
       </Nav>

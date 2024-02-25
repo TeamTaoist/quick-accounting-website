@@ -8,7 +8,8 @@
 }
 
 body {
-  background: linear-gradient(274deg, #518DA5 0%, #F5F5F5 100%);
+  /* background: linear-gradient(274deg, #518DA5 0%, #F5F5F5 100%); */
+  background: linear-gradient(274deg, #F5F5F5 0%, #518DA5 100%);
   font-family: "Inter", sans-serif;
 }
 
@@ -19,5 +20,6 @@ img {
 
 :root {
   --text-primary: #ffffff;
-  --text-secondary: #295082
+  --text-secondary: #295082;
+  --text-gray: #545050;
 }

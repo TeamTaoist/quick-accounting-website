@@ -56,7 +56,8 @@ export const NavLink = styled.div`
 export const MobileNavMenu = styled.div`
   display: none;
   img {
-    width: 14px;
+    width: 16px;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     display: block;
@@ -73,7 +74,8 @@ export const NavListDropdown = styled.div`
   }
   p {
     font-size: 12px;
-    color: var(--text-secondary);
+    color: var(--text-gray);
+    cursor: pointer;
   }
 `;
 export const t = styled.div``;
