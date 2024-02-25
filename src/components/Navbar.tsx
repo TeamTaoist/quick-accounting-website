@@ -1,8 +1,9 @@
 import {
+  DropdownLink,
   Logo,
   MobileNavMenu,
   Nav,
-  NavLink,
+  NavLinks,
   NavList,
   NavListDropdown,
   NavbarContainer,
@@ -18,15 +19,15 @@ const navList = [
   },
   {
     name: "Feature",
-    href: "/",
+    href: "/feature",
   },
   {
     name: "Benefits",
-    href: "/",
+    href: "/benefits",
   },
   {
     name: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];
 
@@ -59,8 +60,10 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </Logo>
         <NavList>
-          {navList.map((item) => (
-            <NavLink>{item.name}</NavLink>
+          {navList.map((item, i) => (
+            <NavLinks to={item.href} key={i}>
+              {item.name}
+            </NavLinks>
           ))}
           <button>Get Started</button>
         </NavList>
@@ -73,8 +76,10 @@ const Navbar = () => {
       </Nav>
       {showNavDropdown && (
         <NavListDropdown>
-          {navList.map((item) => (
-            <p>{item.name}</p>
+          {navList.map((item, i) => (
+            <DropdownLink to={item.href} key={i}>
+              {item.name}
+            </DropdownLink>
           ))}
         </NavListDropdown>
       )}

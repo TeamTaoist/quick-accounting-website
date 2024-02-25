@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar";
+import RouterLink from "./router";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <RouterLink />
     </div>
   );
 };

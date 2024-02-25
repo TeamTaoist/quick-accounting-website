@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
   background: linear-gradient(
@@ -48,10 +49,14 @@ export const Logo = styled.div`
     cursor: pointer;
   }
 `;
-export const NavLink = styled.div`
+export const NavLinks = styled(NavLink)`
   color: var(--text-primary);
   font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
+  &.active {
+    color: var(--text-secondary);
+  }
 `;
 export const MobileNavMenu = styled.div`
   display: none;
@@ -72,10 +77,19 @@ export const NavListDropdown = styled.div`
   @media (max-width: 768px) {
     display: block;
   }
-  p {
-    font-size: 12px;
-    color: var(--text-gray);
-    cursor: pointer;
+`;
+
+export const DropdownLink = styled(NavLink)`
+  font-size: 12px;
+  color: var(--text-gray);
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  &.active {
+    color: #1e3796;
+  }
+  @media (max-width: 768px) {
+    display: block;
   }
 `;
 export const t = styled.div``;
