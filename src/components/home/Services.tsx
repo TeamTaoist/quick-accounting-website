@@ -87,7 +87,8 @@ const Service = styled.div`
   padding: 16px 12px;
   border-radius: 16px;
   width: 350px;
-  background-color: #5d98ae;
+  background: rgba(92, 142, 162, 0.5);
+  backdrop-filter: blur(10px);
   @media (max-width: 768px) {
     flex-direction: row;
     justify-content: start;

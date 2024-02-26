@@ -26,7 +26,8 @@ const Contact = () => {
 export default Contact;
 
 const ContactSection = styled.div`
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 100px;
   /* display: grid;
   justify-content: center; */
 `;
@@ -65,6 +66,7 @@ const SocialLink = styled.div`
   border-radius: 26px;
   img {
     width: 50px;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     width: 400px;

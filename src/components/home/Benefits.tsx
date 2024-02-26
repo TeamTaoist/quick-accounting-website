@@ -35,7 +35,7 @@ const Benefits = () => {
 export default Benefits;
 
 const BenefitsSection = styled.section`
-  padding: 40px 0;
+  padding: 40px 10px;
 `;
 const BenefitList = styled.div`
   display: flex;
@@ -51,7 +51,8 @@ const BenefitList = styled.div`
   }
 `;
 const Benefit = styled.div`
-  background: #5c8ea2;
+  background: rgba(92, 142, 162, 0.5);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
