@@ -31,7 +31,7 @@ const serviceList: IServiceList[] = [
 const Services = () => {
   return (
     <ServiceSection>
-      <h3>SERVICE FOR</h3>
+      <Title>SERVICE FOR</Title>
       <ServiceList>
         {serviceList.map((service, index) => (
           <Service>
@@ -55,24 +55,25 @@ export default Services;
 
 const ServiceSection = styled.section`
   text-align: center;
-  h3 {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    @media (max-width: 768px) {
-      font-size: 22px;
-      text-align: start;
-    }
-    @media (max-width: 600px) {
-      font-size: 16px;
-    }
+`;
+export const Title = styled.h3`
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 22px;
+    text-align: start;
+  }
+  @media (max-width: 600px) {
+    font-size: 16px;
   }
 `;
 const ServiceList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  gap: 22px;
   margin-top: 32px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -87,7 +88,6 @@ const Service = styled.div`
   border-radius: 16px;
   width: 350px;
   background-color: #5d98ae;
-  z-index: 1;
   @media (max-width: 768px) {
     flex-direction: row;
     justify-content: start;

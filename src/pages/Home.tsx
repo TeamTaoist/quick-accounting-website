@@ -1,4 +1,5 @@
 import HomeHeader from "../components/home/HomeHeader";
+import KeyFeatures from "../components/home/KeyFeatures";
 import Services from "../components/home/Services";
 import { Container } from "../style/global.style";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <Container>
       <HomeHeader />
       <Services />
+      <KeyFeatures />
     </Container>
   );
 };
