@@ -24,7 +24,7 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   /* text-align: center; */
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     padding: 70px 0;
     flex-direction: column;
     align-items: start;
@@ -39,7 +39,7 @@ const Header = styled.div`
     @media (max-width: 768px) {
       font-size: 40px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       font-size: 24px;
       max-width: 300px;
       text-align: start;
@@ -56,7 +56,7 @@ const Header = styled.div`
     @media (max-width: 768px) {
       font-size: 18px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       padding: 20px 0;
       text-align: start;
       font-size: 14px;
@@ -79,7 +79,7 @@ const Header = styled.div`
       padding: 12px 24px;
       font-size: 14px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       padding: 10px 24px;
       font-size: 9px;
     }

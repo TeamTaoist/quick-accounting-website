@@ -12,7 +12,12 @@ import logo from "../assets/images/logo.svg";
 import menu from "../assets/images/menu.svg";
 import { useEffect, useRef, useState } from "react";
 
-const navList = [
+interface INavList {
+  name: string;
+  href: string;
+}
+
+const navList: INavList[] = [
   {
     name: "Home",
     href: "/",
