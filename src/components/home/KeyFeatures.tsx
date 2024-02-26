@@ -5,7 +5,14 @@ import arrow from "../../assets/images/home/arrow.svg";
 import styled from "styled-components";
 import { Title } from "./Services";
 
-const keyFeatureList = [
+interface IKeyFeatureList {
+  logo: any;
+  title: string;
+  details: string;
+  link: string;
+}
+
+const keyFeatureList: IKeyFeatureList[] = [
   {
     logo: tracking,
     title: "Income and Expense Tracking",
