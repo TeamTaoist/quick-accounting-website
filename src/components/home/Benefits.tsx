@@ -6,7 +6,7 @@ import realTime from "../../assets/images/home/real-time.svg";
 const Benefits = () => {
   return (
     <BenefitsSection>
-      <Title>CONTACT</Title>
+      <Title>BENEFITS</Title>
       <BenefitList>
         <Benefit>
           <img src={traceable} alt="" />

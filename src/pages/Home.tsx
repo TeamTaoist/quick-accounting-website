@@ -1,3 +1,4 @@
+import Contact from "../components/Contact";
 import Benefits from "../components/home/Benefits";
 import HomeHeader from "../components/home/HomeHeader";
 import KeyFeatures from "../components/home/KeyFeatures";
@@ -11,6 +12,7 @@ const Home = () => {
       <Services />
       <KeyFeatures />
       <Benefits />
+      <Contact />
     </Container>
   );
 };

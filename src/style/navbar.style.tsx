@@ -2,11 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
-  background: linear-gradient(
-    274deg,
-    rgb(120, 173, 187) 100%,
-    rgb(161, 190, 201) 0%
-  );
+  background: linear-gradient(274deg, #5d98ae 100%, #a9cedb 0%);
   height: 72px;
   display: flex;
   justify-content: center;
